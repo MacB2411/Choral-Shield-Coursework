@@ -5,7 +5,7 @@ public class TICKET
     private String CustomerID;
     private String TicketID;
     private int NoOfTickets;
-    private char MOP;
+    private String MOP;
     private String Ticket;
     
     
@@ -14,23 +14,24 @@ public class TICKET
   {
      CustomerID = "";
      TicketID = "";
+     MOP = "";
      NoOfTickets = 0;
      
   }
   
   public String getCustomerID(){
-        return customerID;
+        return CustomerID;
     }
     
     public String getTicketID(){
-        return ticketID;
+        return TicketID;
     }
     
     public int getNoOfTickets(){
-        return noOfTickets;
+        return NoOfTickets;
     }
     
-    public char getMOP(){
+    public String getMOP(){
         return MOP;
     }
     
@@ -69,16 +70,7 @@ public class TICKET
      
    }
     
-     public void displayDetails()
- {
-     // output basic details
-     System.out.print("Essell Academy Choral Shield 2015 ");
-     System.out.print(" The most popular method of sales is " + MOP );
-     System.out.print(" The total money raised for charity is " + Total );
-     System.out.println(Ticket);
-        
-    } 
-    
+ 
     
     
     
