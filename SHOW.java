@@ -1,33 +1,40 @@
-
-/**
- * Write a description of class SHOW here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import javax.swing.JOptionPane;
+import java.io.*;
+import java.util.Calendar;
 public class SHOW
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class SHOW
-     */
+{ 
+    private char MPM;
+    private TICKET orderList[];
+    int noOfOrders;
+    FILEREADCSV orderFile;
+    FILEREADCSV fridayDataFile;
+    int totalCharity;
+    
     public SHOW()
     {
-        // initialise instance variables
-        x = 0;
+        orderFile = new FILEREADCSV();
+        fridayDataFile = new FILEWRITECSV();
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public void processOrders() throws IOException{
+        setUpOrderList();
+        calcTotalAndMostPopularMethod();
+        displayConcertData();
     }
-}
+     
+    public void setUpOrderList() throws IOException{
+         
+        String[] dataRows = orderFile.readCSVtable();
+        
+         
+        noOfOrders = dataRows.length - 1;
+         
+        orderList = new ORDER[noOfOrders];
+        
+        for  (int i = 0; i < noOfOrders; i++) {
+            orderList[i] = new ORDER();
+            
+            orderList[i].setOrderData(dataRows[i+1]);
+        }
+     }
+    }

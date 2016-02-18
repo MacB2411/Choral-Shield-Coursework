@@ -5,7 +5,7 @@ public class TICKET
     private String CustomerID;
     private String TicketID;
     private int NoOfTickets;
-    private String MOP;
+    private char MOP;
     private String Ticket;
     
     
@@ -15,9 +15,25 @@ public class TICKET
      CustomerID = "";
      TicketID = "";
      NoOfTickets = 0;
-     MOP = "";
+     
   }
   
+  public String getCustomerID(){
+        return customerID;
+    }
+    
+    public String getTicketID(){
+        return ticketID;
+    }
+    
+    public int getNoOfTickets(){
+        return noOfTickets;
+    }
+    
+    public char getMOP(){
+        return MOP;
+    }
+    
    public void TicketDetails(String dataItems)
   {
 
