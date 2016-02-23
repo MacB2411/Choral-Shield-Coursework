@@ -35,13 +35,14 @@ public class SHOW
         for  (int i = 0; i < noOfOrders; i++) {
             orderList[i] = new ORDER();
             
-            orderList[i].setOrderData(dataRows[i+1]);
+            orderList[i].setOrderData(dataRows[i]);
         }
      }
      public void calcTotal() throws IOException{ 
-         System.out.println("How much has been raised for charity \n");
-         for  (int i = 0; i < noOfOrders; i++) {
-            OrderList[i].displayDetails();
-        }
+         for (int i = 0; i < noOfOrders; i++)
+         { 
+      
+    
+       }
     }
 }
