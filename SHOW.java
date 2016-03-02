@@ -41,8 +41,13 @@ public class SHOW
      public void calcTotal() throws IOException{ 
          for (int i = 0; i < noOfOrders; i++)
          { 
-      
-    
-       }
+           if (orderList[i].getTicket().substring(0,1)=="W" ||
+           orderList[i].getTicket().substring(0,1)== "T" ) {
+               charity = charity + orderList[i].getNoOfTickets() * 5;
+            }
+            else{
+                
+            }
+           
     }
 }
