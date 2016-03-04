@@ -6,7 +6,7 @@ public class TICKET
     private String TicketID;
     private int NoOfTickets;
     private String MOP;
-    private String Ticket;
+    //private String Ticket;
     int Total;
     
     
@@ -65,19 +65,12 @@ public class TICKET
     
   public String getTicket()
   {
-    return Ticket;
+    return TicketID;
      
    }
      
     
-    public void displayConcertData(){
-        //System.out.println("Essell Academy Choral Shield " + Calendar.getInstance().get(Calendar.YEAR));
-        
-        //String method = (MPM == 'S') ?  "School" : "Website";
-        
-       // System.out.println("The most popular method of sales is " + method);
-        System.out.println("The total money raised for charity is £" + Total);
-    }
+    
     }
     
    
